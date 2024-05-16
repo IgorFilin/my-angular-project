@@ -1,2 +1,2 @@
 <h2>{{ text }}</h2>
-<input type="text" (keyup.enter)="changeTextHandler($event)" />
+<input type="text" (keyup.enter)="changeTextHandler($event)" [value]="text" />

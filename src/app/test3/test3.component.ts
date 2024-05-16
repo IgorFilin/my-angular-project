@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./test3.component.scss'],
 })
 export class Test3Component {
-  text = '';
+  text = '222';
 
   changeTextHandler(event: Event) {
     this.text = (event.currentTarget as HTMLInputElement).value;
