@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
@@ -12,6 +12,10 @@ import { Test6Component } from './test5/test6/test6.component';
 import { CounterComponent } from './counter/counter.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './store/counter/counter.reducer';
+import { TestRequestComponent } from './test-request/test-request.component';
+import { EffectsModule } from '@ngrx/effects';
+import { GetJsonDataEffect } from './store/jsonPlaceholder/jsonPlaceholder.effects';
+import { jsonPlaceholderReducer } from './store/jsonPlaceholder/jsonPlaceholder.reducer';
 
 @NgModule({
   declarations: [
@@ -23,11 +27,17 @@ import { counterReducer } from './store/counter/counter.reducer';
     Test5Component,
     Test6Component,
     CounterComponent,
+    TestRequestComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({ counter: counterReducer }),
+    HttpClientModule,
+    StoreModule.forRoot({
+      counter: counterReducer,
+      jsonPlaseholder: jsonPlaceholderReducer,
+    }),
+    EffectsModule.forRoot(GetJsonDataEffect),
   ],
   providers: [],
   bootstrap: [AppComponent],
