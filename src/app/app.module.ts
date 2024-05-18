@@ -9,6 +9,9 @@ import { Test4Component } from './test4/test4.component';
 import { FormsModule } from '@angular/forms';
 import { Test5Component } from './test5/test5.component';
 import { Test6Component } from './test5/test6/test6.component';
+import { CounterComponent } from './counter/counter.component';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './store/counter/counter.reducer';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,13 @@ import { Test6Component } from './test5/test6/test6.component';
     Test4Component,
     Test5Component,
     Test6Component,
+    CounterComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    StoreModule.forRoot({ counter: counterReducer }),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
