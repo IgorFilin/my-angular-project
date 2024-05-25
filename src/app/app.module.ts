@@ -20,6 +20,8 @@ import { OutputTestComponent } from './output-test/output-test.component';
 import { ChildComponent } from './output-test/child/child.component';
 import { Test6DirectivesComponent } from './test6-directives/test6-directives.component';
 import { ChangeRandomColorsDirective } from './directives/change-random-colors.directive';
+import { CustomNgIfDirective } from './directives/custom-ng-if.directive';
+import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { ChangeRandomColorsDirective } from './directives/change-random-colors.d
     OutputTestComponent,
     ChildComponent,
     Test6DirectivesComponent,
+    CustomNgIfDirective,
+    CustomNgShowDirective,
   ],
   imports: [
     BrowserModule,

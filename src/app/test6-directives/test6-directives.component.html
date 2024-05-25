@@ -1,3 +1,7 @@
 <h2 [angChangeRandomColors]="['red', 'blue', 'yellow']">
   Посмотри на меня, я меняю цвет :)
 </h2>
+<div>
+  <h2 *ngCustomIf="isShowed">Я включу дисплей none по флажку</h2>
+  <button (click)="isShowed = !isShowed">Поменять отображение</button>
+</div>
