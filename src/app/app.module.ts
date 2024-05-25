@@ -22,6 +22,7 @@ import { Test6DirectivesComponent } from './test6-directives/test6-directives.co
 import { ChangeRandomColorsDirective } from './directives/change-random-colors.directive';
 import { CustomNgIfDirective } from './directives/custom-ng-if.directive';
 import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
+import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.directive';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
     Test6DirectivesComponent,
     CustomNgIfDirective,
     CustomNgShowDirective,
+    CustomNgForEvenElDirective,
   ],
   imports: [
     BrowserModule,

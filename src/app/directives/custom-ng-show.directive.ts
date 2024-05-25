@@ -26,7 +26,6 @@ export class CustomNgShowDirective implements OnChanges {
   }
 
   changeVisionTemplate(isShowed: boolean = this.ngCustomShow) {
-    console.log('попали', isShowed);
     if (isShowed) {
       this._el.nativeElement.style.display = 'block';
     } else {
