@@ -1,32 +1,36 @@
 import {
   Directive,
+  ElementRef,
   Input,
+  OnChanges,
   OnInit,
+  SimpleChange,
   TemplateRef,
   ViewContainerRef,
 } from '@angular/core';
 
 @Directive({
-  selector: '[ngCustomIf]',
+  selector: '[ngCustomShow]',
 })
-export class CustomNgShowDirective implements OnInit {
-  @Input() set ngCustomIf(isShow: boolean) {
-    this.changeVisionTemplate(isShow);
+export class CustomNgShowDirective implements OnChanges {
+  @Input() ngCustomShow: boolean = true;
+
+  private _el: ElementRef;
+
+  constructor(el: ElementRef) {
+    this._el = el;
   }
 
-  constructor(
-    private viewContainer: ViewContainerRef,
-    private templateRef: TemplateRef<any>
-  ) {}
-
-  ngOnInit() {
-    this.changeVisionTemplate();
+  ngOnChanges(value: { ngCustomShow: SimpleChange }) {
+    this.changeVisionTemplate(value.ngCustomShow.currentValue);
   }
 
-  changeVisionTemplate(isShow: boolean = true) {
-    this.viewContainer.clear();
-    if (isShow) {
-      this.viewContainer.createEmbeddedView(this.templateRef);
+  changeVisionTemplate(isShowed: boolean = this.ngCustomShow) {
+    console.log('попали', isShowed);
+    if (isShowed) {
+      this._el.nativeElement.style.display = 'block';
+    } else {
+      this._el.nativeElement.style.display = 'none';
     }
   }
 }

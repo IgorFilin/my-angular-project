@@ -5,3 +5,7 @@
   <h2 *ngCustomIf="isShowed">Я включу дисплей none по флажку</h2>
   <button (click)="isShowed = !isShowed">Поменять отображение</button>
 </div>
+<div>
+  <h2 [ngCustomShow]="isShowDisplay">Я включу дисплей none по флажку</h2>
+  <button (click)="isShowDisplay = !isShowDisplay">Поменять отображение</button>
+</div>

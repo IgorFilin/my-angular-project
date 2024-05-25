@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Test6DirectivesComponent {
   isShowed: boolean = true;
+  isShowDisplay: boolean = true;
 }
