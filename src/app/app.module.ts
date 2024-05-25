@@ -16,9 +16,14 @@ import { TestRequestComponent } from './test-request/test-request.component';
 import { EffectsModule } from '@ngrx/effects';
 import { GetJsonDataEffect } from './store/jsonPlaceholder/jsonPlaceholder.effects';
 import { jsonPlaceholderReducer } from './store/jsonPlaceholder/jsonPlaceholder.reducer';
+import { OutputTestComponent } from './output-test/output-test.component';
+import { ChildComponent } from './output-test/child/child.component';
+import { Test6DirectivesComponent } from './test6-directives/test6-directives.component';
+import { ChangeRandomColorsDirective } from './directives/change-random-colors.directive';
 
 @NgModule({
   declarations: [
+    ChangeRandomColorsDirective,
     AppComponent,
     TestComponent,
     Test2Component,
@@ -28,6 +33,9 @@ import { jsonPlaceholderReducer } from './store/jsonPlaceholder/jsonPlaceholder.
     Test6Component,
     CounterComponent,
     TestRequestComponent,
+    OutputTestComponent,
+    ChildComponent,
+    Test6DirectivesComponent,
   ],
   imports: [
     BrowserModule,

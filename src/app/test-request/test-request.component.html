@@ -1,7 +1,5 @@
 <button (click)="requestData()">GET DATA</button>
-<div *ngIf="jsonData | async as data">
-  <div>{{ data.length }}</div>
-</div>
-<div *ngFor="let item of jsonData | async">
+<div *ngFor="let item of jsonData | async; count as count">
   <div>{{ item.title }}</div>
+  <div>{{ count }}</div>
 </div>
