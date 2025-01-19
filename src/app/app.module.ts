@@ -23,6 +23,7 @@ import { ChangeRandomColorsDirective } from './directives/change-random-colors.d
 import { CustomNgIfDirective } from './directives/custom-ng-if.directive';
 import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
 import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.directive';
+import { LessonOneComponent } from './lesson_1/lesson-one/lesson-one.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.d
     CustomNgIfDirective,
     CustomNgShowDirective,
     CustomNgForEvenElDirective,
+    LessonOneComponent,
   ],
   imports: [
     BrowserModule,
