@@ -15,11 +15,12 @@
 			"prefix": "ang",
 			"architect": {
 				"build": {
-					"builder": "@angular-devkit/build-angular:browser",
+					"builder": "@angular-devkit/build-angular:application",
 					"options": {
-						"outputPath": "dist/my-angular-project",
-						"index": "src/index.html",
-						"main": "src/main.ts",
+						"outputPath": {
+              "base": "dist/my-angular-project"
+            },
+            "index": "src/index.html",
 						"polyfills": [
 							"zone.js"
 						],
@@ -31,7 +32,8 @@
 						"styles": [
 							"src/styles.scss"
 						],
-						"scripts": []
+            "scripts": [],
+            "browser": "src/main.ts"
 					},
 					"configurations": {
 						"production": {
@@ -49,10 +51,8 @@
 							],
 							"outputHashing": "all"
 						},
-						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+            "development": {
+              "optimization": false,
 							"extractLicenses": false,
 							"sourceMap": true,
 							"namedChunks": true

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
@@ -21,27 +21,23 @@ import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.d
 import { LessonOneComponent } from './lesson_1/lesson-one/lesson-one.component';
 import { ImpurePipe } from './test/impure-pipe.pipe';
 
-@NgModule({
-  declarations: [
-    ChangeRandomColorsDirective,
-    AppComponent,
-    Test2Component,
-    Test3Component,
-    Test4Component,
-    Test5Component,
-    Test6Component,
-    CounterComponent,
-    TestRequestComponent,
-    OutputTestComponent,
-    ChildComponent,
-    Test6DirectivesComponent,
-    CustomNgIfDirective,
-    CustomNgShowDirective,
-    CustomNgForEvenElDirective,
-    LessonOneComponent,
-  ],
-  imports: [TestComponent, BrowserModule, FormsModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        ChangeRandomColorsDirective,
+        AppComponent,
+        Test2Component,
+        Test3Component,
+        Test4Component,
+        Test5Component,
+        Test6Component,
+        CounterComponent,
+        TestRequestComponent,
+        OutputTestComponent,
+        ChildComponent,
+        Test6DirectivesComponent,
+        CustomNgIfDirective,
+        CustomNgShowDirective,
+        CustomNgForEvenElDirective,
+        LessonOneComponent,
+    ],
+    bootstrap: [AppComponent], imports: [TestComponent, BrowserModule, FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
