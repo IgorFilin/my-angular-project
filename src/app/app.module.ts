@@ -24,12 +24,12 @@ import { CustomNgIfDirective } from './directives/custom-ng-if.directive';
 import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
 import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.directive';
 import { LessonOneComponent } from './lesson_1/lesson-one/lesson-one.component';
+import { ImpurePipe } from './test/impure-pipe.pipe';
 
 @NgModule({
   declarations: [
     ChangeRandomColorsDirective,
     AppComponent,
-    TestComponent,
     Test2Component,
     Test3Component,
     Test4Component,
@@ -46,6 +46,7 @@ import { LessonOneComponent } from './lesson_1/lesson-one/lesson-one.component';
     LessonOneComponent,
   ],
   imports: [
+    TestComponent,
     BrowserModule,
     FormsModule,
     HttpClientModule,

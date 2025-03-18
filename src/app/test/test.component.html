@@ -1,1 +1,8 @@
-<button [disabled]="isAppLoading">Send</button>
+<input #phone name="phone" class="form-control" />
+<button class="btn" (click)="phones.push(phone.value)">Add</button>
+
+<ng-container *ngFor="let phone of phones">
+  <div>{{ phone }}</div>
+</ng-container>
+
+<p>{{ phones | impurePipe }}</p>
