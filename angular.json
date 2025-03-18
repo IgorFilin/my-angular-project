@@ -63,19 +63,19 @@
 				"serve": {
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
-						"production": {
-							"browserTarget": "my-angular-project:build:production"
+            "production": {
+              "buildTarget": "my-angular-project:build:production"
 						},
-						"development": {
-							"browserTarget": "my-angular-project:build:development"
+            "development": {
+              "buildTarget": "my-angular-project:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
 				},
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
-					"options": {
-						"browserTarget": "my-angular-project:build"
+          "options": {
+            "buildTarget": "my-angular-project:build"
 					}
 				},
 				"test": {
