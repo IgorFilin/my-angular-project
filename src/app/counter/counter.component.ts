@@ -8,9 +8,10 @@ import {
 } from './../store/counter/counter.actions';
 
 @Component({
-  selector: 'ang-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.scss'],
+    selector: 'ang-counter',
+    templateUrl: './counter.component.html',
+    styleUrls: ['./counter.component.scss'],
+    standalone: false
 })
 export class CounterComponent {
   store = inject(Store);

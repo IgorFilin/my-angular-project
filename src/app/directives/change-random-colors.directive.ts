@@ -1,7 +1,8 @@
 import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[angChangeRandomColors]',
+    selector: '[angChangeRandomColors]',
+    standalone: false
 })
 export class ChangeRandomColorsDirective implements AfterViewInit {
   @Input('angChangeRandomColors') colors: string[] = [];

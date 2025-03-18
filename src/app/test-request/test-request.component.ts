@@ -5,9 +5,10 @@ import { getDataRequest } from '../store/jsonPlaceholder/jsonPlaceholder.actions
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'ang-test-request',
-  templateUrl: './test-request.component.html',
-  styleUrls: ['./test-request.component.scss'],
+    selector: 'ang-test-request',
+    templateUrl: './test-request.component.html',
+    styleUrls: ['./test-request.component.scss'],
+    standalone: false
 })
 export class TestRequestComponent {
   store = inject(Store);

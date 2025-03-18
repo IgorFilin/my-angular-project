@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ang-test2',
-  templateUrl: './test2.component.html',
-  styleUrls: ['./test2.component.scss'],
+    selector: 'ang-test2',
+    templateUrl: './test2.component.html',
+    styleUrls: ['./test2.component.scss'],
+    standalone: false
 })
 export class Test2Component {
   test2Title = 'HelloWrold';

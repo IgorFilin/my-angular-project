@@ -1,7 +1,8 @@
 import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[ngCustomIf]',
+    selector: '[ngCustomIf]',
+    standalone: false
 })
 export class CustomNgIfDirective {
   @Input() set ngCustomIf(isShow: boolean) {

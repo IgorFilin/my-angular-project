@@ -10,7 +10,8 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[ngCustomShow]',
+    selector: '[ngCustomShow]',
+    standalone: false
 })
 export class CustomNgShowDirective implements OnChanges {
   @Input() ngCustomShow: boolean = true;

@@ -9,7 +9,8 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[ngForEvenEl]',
+    selector: '[ngForEvenEl]',
+    standalone: false
 })
 export class CustomNgForEvenElDirective {
   @Input() set ngForEvenEl(collection: any) {

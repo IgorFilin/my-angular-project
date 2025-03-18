@@ -7,11 +7,10 @@ interface IUserType {
 }
 
 @Component({
-  standalone: true,
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  imports: [ImpurePipe, CommonModule],
-  styleUrls: ['test.components.scss'],
+    selector: 'app-test',
+    templateUrl: './test.component.html',
+    imports: [ImpurePipe, CommonModule],
+    styleUrls: ['test.components.scss']
 })
 export class TestComponent {
   count: number = 0;

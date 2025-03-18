@@ -6,9 +6,10 @@ interface Adress {
 }
 
 @Component({
-  selector: 'ang-test5',
-  templateUrl: './test5.component.html',
-  styleUrls: ['./test5.component.scss'],
+    selector: 'ang-test5',
+    templateUrl: './test5.component.html',
+    styleUrls: ['./test5.component.scss'],
+    standalone: false
 })
 export class Test5Component {
   name = 'Igor';
