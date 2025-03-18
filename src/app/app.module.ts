@@ -10,12 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { Test5Component } from './test5/test5.component';
 import { Test6Component } from './test5/test6/test6.component';
 import { CounterComponent } from './counter/counter.component';
-import { StoreModule } from '@ngrx/store';
-import { counterReducer } from './store/counter/counter.reducer';
 import { TestRequestComponent } from './test-request/test-request.component';
-import { EffectsModule } from '@ngrx/effects';
-import { GetJsonDataEffect } from './store/jsonPlaceholder/jsonPlaceholder.effects';
-import { jsonPlaceholderReducer } from './store/jsonPlaceholder/jsonPlaceholder.reducer';
 import { OutputTestComponent } from './output-test/output-test.component';
 import { ChildComponent } from './output-test/child/child.component';
 import { Test6DirectivesComponent } from './test6-directives/test6-directives.component';
@@ -45,17 +40,7 @@ import { ImpurePipe } from './test/impure-pipe.pipe';
     CustomNgForEvenElDirective,
     LessonOneComponent,
   ],
-  imports: [
-    TestComponent,
-    BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    StoreModule.forRoot({
-      counter: counterReducer,
-      jsonPlaseholder: jsonPlaceholderReducer,
-    }),
-    EffectsModule.forRoot(GetJsonDataEffect),
-  ],
+  imports: [TestComponent, BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
