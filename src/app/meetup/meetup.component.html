@@ -1,0 +1,11 @@
+<div>ID: {{ currentId() }}</div>
+@if(resourceUser.isLoading()) {
+<div>...загрузка</div>
+} @else {
+<div>{{ resourceUser.value().firstName }}</div>
+<div>{{ resourceUser.value().email }}</div>
+<div><img [src]="resourceUser.value().image" alt="" /></div>
+}
+
+<button (click)="changeId()">Change ID</button>
+<button (click)="resourceUser.reload()">Reload</button>

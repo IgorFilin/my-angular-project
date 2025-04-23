@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { Test2Component } from './test2/test2.component';
@@ -9,8 +12,6 @@ import { Test4Component } from './test4/test4.component';
 import { FormsModule } from '@angular/forms';
 import { Test5Component } from './test5/test5.component';
 import { Test6Component } from './test5/test6/test6.component';
-import { CounterComponent } from './counter/counter.component';
-import { TestRequestComponent } from './test-request/test-request.component';
 import { OutputTestComponent } from './output-test/output-test.component';
 import { ChildComponent } from './output-test/child/child.component';
 import { Test6DirectivesComponent } from './test6-directives/test6-directives.component';
@@ -19,25 +20,34 @@ import { CustomNgIfDirective } from './directives/custom-ng-if.directive';
 import { CustomNgShowDirective } from './directives/custom-ng-show.directive';
 import { CustomNgForEvenElDirective } from './directives/custom-ng-for-even-el.directive';
 import { LessonOneComponent } from './lesson_1/lesson-one/lesson-one.component';
-import { ImpurePipe } from './test/impure-pipe.pipe';
+import { MeetupComponent } from './meetup/meetup.component';
+import { HooksComponent } from './hooks/hooks.component';
 
-@NgModule({ declarations: [
-        ChangeRandomColorsDirective,
-        AppComponent,
-        Test2Component,
-        Test3Component,
-        Test4Component,
-        Test5Component,
-        Test6Component,
-        CounterComponent,
-        TestRequestComponent,
-        OutputTestComponent,
-        ChildComponent,
-        Test6DirectivesComponent,
-        CustomNgIfDirective,
-        CustomNgShowDirective,
-        CustomNgForEvenElDirective,
-        LessonOneComponent,
-    ],
-    bootstrap: [AppComponent], imports: [TestComponent, BrowserModule, FormsModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    ChangeRandomColorsDirective,
+    AppComponent,
+    Test2Component,
+    Test3Component,
+    Test4Component,
+    Test5Component,
+    Test6Component,
+    OutputTestComponent,
+    ChildComponent,
+    Test6DirectivesComponent,
+    CustomNgIfDirective,
+    CustomNgShowDirective,
+    CustomNgForEvenElDirective,
+    LessonOneComponent,
+  ],
+  bootstrap: [AppComponent],
+  imports: [
+    TestComponent,
+    BrowserModule,
+    FormsModule,
+    MeetupComponent,
+    HooksComponent,
+  ],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 export class AppModule {}
